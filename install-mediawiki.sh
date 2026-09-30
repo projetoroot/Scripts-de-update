@@ -1012,6 +1012,10 @@ $wgUseImageMagick = true;
 
 $wgImageMagickConvertCommand = '/usr/bin/convert';
 
+# Restringe edição e criação de páginas para usuários não autenticados
+$wgGroupPermissions['*']['edit'] = false;
+$wgGroupPermissions['*']['createpage'] = false;
+
 PHP
 
     chown www-data:www-data "${MEDIAWIKI_DIR}/LocalSettings.php"
